@@ -258,7 +258,7 @@
 </div>
 
 <div class="circle-container">
-    <div class="circle" id="countdownDisplay"</div> 24:00:00</div>
+    <div class="circle" id="countdownDisplay">انتظار 24:00:00</div>
 </div>
 
 <div class="play-button" id="playButton">
@@ -499,6 +499,10 @@
       if (user) {
           currentUserId = user.uid;
           loadPointsFromDatabase();
+      } else {
+          // إذا لم يكن هناك مستخدم، أظهر نافذة تسجيل الدخول
+          const popup = document.getElementById('popup');
+          popup.style.display = "flex"; // عرض نافذة تسجيل الدخول
       }
   });
 
